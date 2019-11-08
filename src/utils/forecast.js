@@ -10,10 +10,10 @@ const forecast = (lat, long, callback) => {
             callback('Invalid coordinates. Unable to find location', undefined)
         }
         else {
-            callback(undefined, 'Rain probability: ' + body.currently.precipProbability + '     Temperature: ' + body.currently.temperature             
-                // Temperature: body.currently.temperature,
-                // ChanceOfRain: body.currently.precipProbability
-            )
+            callback(undefined, 'Summary: ' + body.currently.summary + ' --- Rain probability: ' + body.currently.precipProbability + '% ' + ' --- Temperature: ' + body.currently.temperature + ' *C')             
+            // Temperature: body.currently.temperature,
+            // ChanceOfRain: body.currently.precipProbability
+            
 
         } 
         
